@@ -13,8 +13,21 @@
   margin-bottom: 10px;
 }
 
-.status::before {
-  height: 10px;
+.status {
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-color: red;
+  position: absolute;
+  transform: translate(-150%, 90%);
+}
+
+.isOnline {
+  composes: status;
+  background-color: green;
+}
+
+.avatar {
+  margin-right: 10px;
+  border-radius: 10%;
 }

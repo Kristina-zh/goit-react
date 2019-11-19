@@ -2,11 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import st from './Statistics.module.css';
 
+// function randColor() {
+//   const r = Math.floor(Math.random() * 256);
+//   const g = Math.floor(Math.random() * 256);
+//   const b = Math.floor(Math.random() * 256);
+//   const rgba = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+//   return rgba;
+// }
+
 function randColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  return '#' + r.toString(16) + g.toString(16) + b.toString(16);
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 const Statistics = ({ title, stats }) => (
