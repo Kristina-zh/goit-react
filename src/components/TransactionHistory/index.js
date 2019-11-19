@@ -24,22 +24,8 @@ const TransactionHistory = ({ items }) => (
   </table>
 );
 
-TransactionHistory.defaultProps = {
-  items: PropTypes.shape({
-    id: '',
-    type: '',
-    amount: 0,
-    currency: '',
-  }),
-};
-
 TransactionHistory.propTypes = {
-  items: PropTypes.shape({
-    id: PropTypes.number,
-    type: PropTypes.string,
-    amount: PropTypes.number,
-    currency: PropTypes.string,
-  }),
+  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default TransactionHistory;

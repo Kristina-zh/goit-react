@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import stl from './FriendList.module.css';
 
 const FriendList = ({ friends }) => {
-  // const spanClasses = friends.isOnline === true ? stl.isOnline : stl.status;
-
-  // if (friends.isOnline) {
-  //   spanClasses.push(stl.isOnline);
-  // }
-
   return (
     <ul className={stl.friendList}>
       {friends.map(e => (
@@ -22,22 +16,8 @@ const FriendList = ({ friends }) => {
   );
 };
 
-FriendList.defaultProps = {
-  friends: PropTypes.shape({
-    id: '',
-    name: '',
-    isOnline: false,
-    avatar: '',
-  }),
-};
-
 FriendList.propTypes = {
-  friends: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-    avatar: PropTypes.string,
-  }),
+  friends: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default FriendList;
